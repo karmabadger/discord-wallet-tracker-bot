@@ -63,6 +63,10 @@ function watchEtherTransfers(accounts) {
             send(
               process.env.DISCORD_WEBHOOK_URL, "@everyone! " + accounts[tx.from.toLowerCase()] + " " + swap_info.msg
             );
+
+            send(
+              process.env.DISCORD_WEBHOOK_URL2, "@everyone! " + accounts[tx.from.toLowerCase()] + " " + swap_info.msg
+            );
           }
           
         }
