@@ -12,10 +12,10 @@ let wallets_json = fs.readFileSync("./wallets/wallets.json", "utf8");
 let wallets = JSON.parse(wallets_json);
 
 
-let network = "rinkeby";
+let network = "mainnet";
 
-let wss_url = `wss://${process.env.ETH_NETWORK}.infura.io/ws/v3/${process.env.INFURA_PROJECT_ID}`
-let https_url = `https://${process.env.ETH_NETWORK}.infura.io/v3/${process.env.INFURA_PROJECT_ID}`
+let wss_url = `wss://${network}.infura.io/ws/v3/${process.env.INFURA_PROJECT_ID}`
+let https_url = `https://${network}.infura.io/v3/${process.env.INFURA_PROJECT_ID}`
 
 
 console.log(wss_url)
